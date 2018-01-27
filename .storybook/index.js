@@ -29,7 +29,24 @@ storiesOf('Popper', module)
       <div>
         <Popper
           renderRef={({ setReference, toggle }) => (
-            <span ref={setReference} onClick={toggle}>
+            <span
+              ref={setReference}
+              onClick={toggle}
+              style={{
+                position: 'relative',
+                left: `${number('x-position', 0, {
+                  range: true,
+                  min: 0,
+                  max: 99,
+                  step: 1
+                })}vw`,
+                top: `${number('y-position', 0, {
+                  range: true,
+                  min: 0,
+                  max: 99,
+                  step: 1
+                })}vh`
+              }}>
               Minimal Popover
             </span>
           )}>
