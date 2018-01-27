@@ -12,7 +12,6 @@ import {
   select
 } from '@storybook/addon-knobs/react'
 
-/* import Popper from '../src/index.js'*/
 import Popper from '@d8660091/react-popper'
 
 const placementOptions = {
