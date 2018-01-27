@@ -18,6 +18,7 @@
     "type": "git",
     "url": "git://github.com/d8660091/react-popper.git"
   },
+  "keywords": ["react", "popper", "popper.js", "recompose"],
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-info": "^3.3.11",
