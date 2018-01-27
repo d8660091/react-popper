@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"@d8660091/react-popper@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@d8660091/react-popper/-/react-popper-0.2.5.tgz#b5f65f90ec9956832c6829cdff5a74c29705bc95"
+  dependencies:
+    lodash "^4.17.4"
+    popper.js "^1.12.9"
+    prop-types "^15.6.0"
+    recompose "^0.26.0"
+
 "@storybook/addon-actions@^3.3.10":
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.3.10.tgz#f3e4b538d8260364c55a3ba1e301a2fab9d8d3f2"
