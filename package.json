@@ -4,6 +4,8 @@
     "react-dom": "^16.2.0"
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^3.3.11",
+    "@storybook/addon-options": "^3.3.11",
     "lodash": "^4.17.4",
     "popper.js": "^1.12.9",
     "prop-types": "^15.6.0",

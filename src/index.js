@@ -13,8 +13,20 @@ const enhance = rc.compose(
     children: PropTypes.any.isRequired,
     options: PropTypes.object
   }),
-  rc.withState('reference', 'setReference', null),
-  rc.withState('pop', 'setPop', null),
+  rc.withStateHandlers(
+    {
+      reference: null
+    },
+    {
+      setReference: () => reference => {
+        if (reference) {
+          return {
+            reference
+          }
+        }
+      }
+    }
+  ),
   rc.withStateHandlers(
     {
       pop: null,
@@ -65,6 +77,16 @@ const enhance = rc.compose(
     }
   }),
   rc.lifecycle({
+    componentDidUpdate() {
+      if (this.props.popper) {
+        this.props.popper.scheduleUpdate()
+      }
+    },
+    componentWillReceiveProps(nextProps) {
+      if (this.props.options != nextProps.options && this.props.pop) {
+        this.props.setPop(this.props.pop)
+      }
+    },
     componentWillMount() {
       document.addEventListener('mousedown', this.props.onClick)
     },
