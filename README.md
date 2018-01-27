@@ -4,8 +4,8 @@ The best React popper based on [popper.js](https://github.com/FezVrasta/popper.j
 
 **Features**:
 * Easy to use, check the usage below.
-* React to props change, rerender the popper when options change.
-* Nesting, popper inside popper, so one can use two popup windows for _mouseenter_ and _onclick_ event separtely
+* React to props change, re-render the popper when options change.
+* Nesting, popper inside popper, so one can use two popup windows for _mouseenter_ and _click_ events separately
 
 ## Usage
 
@@ -22,6 +22,6 @@ The best React popper based on [popper.js](https://github.com/FezVrasta/popper.j
 </div>
 ```
 
-[**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the compoennts by live editting the options and placements.
+[**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
 
