@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@d8660091/react-popper": "^0.2.6",
+    "@d8660091/react-popper": "^0.2.7",
     "@storybook/addon-info": "^3.3.11",
     "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-options": "^3.3.11",
@@ -41,6 +41,8 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build": "babel src -d dist"
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && babel src -d dist",
+    "prepublish": "npm run build"
   }
 }
