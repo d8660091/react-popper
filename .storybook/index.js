@@ -24,6 +24,21 @@ const placementOptions = {
 storiesOf('Popper', module)
   .addDecorator(withKnobs)
   .add(
+    'Minimal',
+    withInfo()(() => (
+      <div>
+        <Popper
+          renderRef={({ setReference, toggle }) => (
+            <span ref={setReference} onClick={toggle}>
+              Minimal Popover
+            </span>
+          )}>
+          <div>Popper content</div>
+        </Popper>
+      </div>
+    ))
+  )
+  .add(
     'Simple',
     withInfo()(() => (
       <div>
@@ -54,7 +69,7 @@ storiesOf('Popper', module)
                   step: 1
                 })}vh`
               }}>
-              Popover Right
+              Simple Popover
             </span>
           )}
           options={object('popper options', {
