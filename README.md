@@ -3,9 +3,10 @@
 The best React popper based on [popper.js](https://github.com/FezVrasta/popper.js) and [React 16](https://reactjs.org/blog/2017/09/26/react-v16.0.html)
 
 **Features**:
+* "Do One Thing and Do It Well"
 * Easy to use, check the usage below.
 * React to props change, re-render the popper when options change.
-* Nesting, popper inside popper, so one can use two popup windows for _mouseenter_ and _click_ events separately
+* Nesting, popper inside popper, so one can use two popup windows for _mouseenter_ and _click_ events separately.
 
 ## Usage
 
