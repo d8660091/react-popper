@@ -1,0 +1,28 @@
+{
+  "peerDepencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "popper.js": "^1.12.9",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "recompose": "^0.26.0"
+  },
+  "name": "@d8660091/react-popper",
+  "version": "0.1.0",
+  "description": "A React component for displaying popper based on popper.js",
+  "main": "index.js",
+  "author": "Xu Deng",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-info": "^3.3.11",
+    "@storybook/react": "^3.3.10",
+    "babel-core": "^6.26.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  }
+}
