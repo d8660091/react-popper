@@ -2,6 +2,8 @@
 
 The best React popper based on [popper.js](https://github.com/FezVrasta/popper.js) and [React 16](https://reactjs.org/blog/2017/09/26/react-v16.0.html)
 
+https://www.useloom.com/share/554e9841739b444b8a53d87e9534d115
+
 **Features**:
 * Easy to use, check the usage below.
 * React to props change, re-render the popper when options change.
