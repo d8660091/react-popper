@@ -10,16 +10,14 @@ The best React popper based on [popper.js](https://github.com/FezVrasta/popper.j
 ## Usage
 
 ``` jsx
-<div>
-  <Popper
-    renderRef={({ setReference, toggle }) => (
-      <span ref={setReference} onClick={toggle}>
-        Popover Trigger
-      </span>
-    )}>
-    <div>Popper content</div>
-  </Popper>
-</div>
+<Popper
+  renderRef={({ setReference, toggle }) => (
+    <span ref={setReference} onClick={toggle}>
+      Popover Trigger
+    </span>
+  )}>
+  <div>Popper content</div>
+</Popper>
 ```
 
 [**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
