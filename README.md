@@ -9,17 +9,20 @@ The best React popper based on [popper.js](https://github.com/FezVrasta/popper.j
 
 ## Usage
 
-Install with yarn
+Install with yarn:
+
 ``` shell
 yarn add @d8660091/react-popper
 ```
-or npm
+
+Or npm:
 
 ``` shell
 npm install @d8660091/react-popper -P
 ```
 
 Import in your source file:
+
 ``` jsx
 import Popper from '@d8660091/react-popper'
 
