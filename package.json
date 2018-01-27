@@ -10,10 +10,14 @@
     "recompose": "^0.26.0"
   },
   "name": "@d8660091/react-popper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A React component for displaying popper based on popper.js",
   "main": "index.js",
   "author": "Xu Deng",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/d8660091/react-popper.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@storybook/addon-info": "^3.3.11",
