@@ -92,6 +92,9 @@ const enhance = rc.compose(
     },
     componentWillUnmount() {
       document.removeEventListener('mousedown', this.props.onClick)
+      if (this.props.popper) {
+        this.props.popper.destroy()
+      }
     }
   })
 )
