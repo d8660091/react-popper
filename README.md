@@ -47,7 +47,7 @@ Props:
 {
   options: Object,
   renderRef: ({
-    setReference: (el: HTMLElement): void,
+    setReference: (el: HTMLElement) => void,
     isOpened: boolean,
     open: () => void,
     close: () => void,
