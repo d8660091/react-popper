@@ -3,12 +3,6 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
-  "dependencies": {
-    "lodash": "^4.17.4",
-    "popper.js": "^1.12.9",
-    "prop-types": "^15.6.0",
-    "recompose": "^0.26.0"
-  },
   "name": "@d8660091/react-popper",
   "version": "0.2.10",
   "description": "A React component for displaying popper based on popper.js",
@@ -25,8 +19,14 @@
     "recompose"
   ],
   "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "popper.js": "^1.12.9",
+    "prop-types": "^15.6.0",
+    "recompose": "^0.26.0"
+  },
   "devDependencies": {
-    "@d8660091/react-popper": "^0.2.8",
+    "@d8660091/react-popper": "^0.2.10",
     "@storybook/addon-info": "^3.3.11",
     "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-options": "^3.3.11",
