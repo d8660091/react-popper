@@ -27,6 +27,9 @@ Import in your source file:
 import Popper from '@d8660091/react-popper'
 
 <Popper
+  options={{ 
+    placement: bottom
+  }}
   renderRef={({ setReference, toggle }) => (
     <span ref={setReference} onClick={toggle}>
       Popover Trigger
@@ -35,6 +38,26 @@ import Popper from '@d8660091/react-popper'
   <div>Popper content</div>
 </Popper>
 ```
+
+Props:
+
+``` typescript
+{
+  options: Object,
+  renderRef: ({
+    setReference: (el: HTMLElement): void,
+    isOpened: boolean,
+    open: () => void,
+    close: () => void,
+    toggle: () => void,
+  }) => ReactNode,
+  children: ReactNode[]
+}
+```
+
+* options: popper.js [options](https://popper.js.org/popper-documentation.html#defaults).
+* renderRef: the function to render reference, i.e, the element used to position the popper.
+* children: content inside the popper.
 
 [**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
