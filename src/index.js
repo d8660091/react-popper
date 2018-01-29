@@ -11,7 +11,8 @@ const enhance = rc.compose(
   rc.setPropTypes({
     renderRef: PropTypes.any.isRequired,
     children: PropTypes.any.isRequired,
-    options: PropTypes.object
+    options: PropTypes.object,
+    canClickOutside: PropTypes.bool
   }),
   rc.withStateHandlers(
     {
@@ -66,12 +67,11 @@ const enhance = rc.compose(
   ),
   rc.withHandlers({
     onClick: props => e => {
-      if (props.reference) {
+      if (props.reference && !props.canClickOutside) {
         const isInsidePop = props.pop && props.pop.contains(e.target)
         if (!props.reference.contains(e.target) && !isInsidePop) {
           // click outside
           props.close()
-          return
         }
       }
     }

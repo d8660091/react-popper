@@ -12,7 +12,8 @@ import {
   select
 } from '@storybook/addon-knobs/react'
 
-import Popper from '@d8660091/react-popper'
+/* import Popper from '@d8660091/react-popper'*/
+import Popper from '../src/index'
 
 const placementOptions = {
   top: 'Top',
@@ -181,7 +182,8 @@ storiesOf('Popper', module)
                   }}>
                   Nested popover
                 </span>
-              )}>
+              )}
+              canClickOutside={boolean('Inner poppper canClickOutside', false)}>
               <PopContainer style={{ backgroundColor: '#ccc' }}>
                 On click content. It's very engaging. Right?
               </PopContainer>
@@ -192,6 +194,39 @@ storiesOf('Popper', module)
           </PopContainer>
         </Popper>
         <br />
+      </div>
+    ))
+  )
+  .add(
+    'Can click outside',
+    withInfo()(() => (
+      <div>
+        <Popper
+          canClickOutside={boolean('canClickOutside', true)}
+          renderRef={({ setReference, toggle }) => (
+            <span
+              ref={setReference}
+              onClick={toggle}
+              style={{
+                position: 'relative',
+                left: `${number('x-position', 0, {
+                  range: true,
+                  min: 0,
+                  max: 99,
+                  step: 1
+                })}vw`,
+                top: `${number('y-position', 0, {
+                  range: true,
+                  min: 0,
+                  max: 99,
+                  step: 1
+                })}vh`
+              }}>
+              Minimal Popover
+            </span>
+          )}>
+          <div>Popper content</div>
+        </Popper>
       </div>
     ))
   )
@@ -210,7 +245,7 @@ const PopContainer = ({ children, style }) => (
   </div>
 )
 
-const arrow = () => (
+const Arrow = () => (
   <div
     x-arrow="true"
     style={{
