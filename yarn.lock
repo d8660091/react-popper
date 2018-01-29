@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@d8660091/react-popper@^0.2.10":
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/@d8660091/react-popper/-/react-popper-0.2.12.tgz#f44063087ad998a407ea8cace0bc62de708830ba"
+"@d8660091/react-popper@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@d8660091/react-popper/-/react-popper-0.3.0.tgz#ab95721de0c7d4329de9bb369de57af81226f675"
   dependencies:
     lodash "^4.17.4"
     popper.js "^1.12.9"

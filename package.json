@@ -26,7 +26,7 @@
     "recompose": "^0.26.0"
   },
   "devDependencies": {
-    "@d8660091/react-popper": "^0.2.10",
+    "@d8660091/react-popper": "^0.3.0",
     "@storybook/addon-info": "^3.3.11",
     "@storybook/addon-knobs": "^3.3.11",
     "@storybook/addon-options": "^3.3.11",
