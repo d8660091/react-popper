@@ -32,7 +32,7 @@ import Popper from '@d8660091/react-popper'
 
 <Popper
   options={{ 
-    placement: bottom
+    placement: 'bottom'
   }}
   renderRef={({ setReference, toggle }) => (
     <span ref={setReference} onClick={toggle}>
@@ -56,7 +56,9 @@ Props:
     toggle: () => void,
   }) => ReactNode,
   children: ReactNode[],
-  canClickOutside: Boolean // default: false
+  canClickOutside: Boolean, // default: false
+  style: Object,
+  className: string
 }
 ```
 
@@ -64,6 +66,7 @@ Props:
 * renderRef: the function to render reference, i.e, the element used to position the popper.
 * children: content inside the popper.
 * canClickOutside: if true, popper will not hide itself when users click outside.
+* style and className: goes to the popper instead of the reference.
 
 [**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
