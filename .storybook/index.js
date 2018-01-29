@@ -50,9 +50,16 @@ storiesOf('Popper', module)
               }}>
               Minimal Popover
             </span>
-          )}>
-          <div>Popper content</div>
-        </Popper>
+          )}
+          renderPop={props => (
+            <div
+              ref={props.setPop}
+              style={props.style}
+              className={props.className}>
+              Popper content
+            </div>
+          )}
+        />
       </div>
     ))
   )

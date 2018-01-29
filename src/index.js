@@ -10,6 +10,7 @@ const enhance = rc.compose(
   rc.setDisplayName('Popper'),
   rc.setPropTypes({
     renderRef: PropTypes.any.isRequired,
+    renderPop: PropTypes.func,
     children: PropTypes.any.isRequired,
     options: PropTypes.object,
     canClickOutside: PropTypes.bool
@@ -104,9 +105,16 @@ export default enhance(props => (
     {props.renderRef({ ...props })}
     {props.isOpened &&
       ReactDOM.createPortal(
-        <div ref={props.setPop} style={props.style} className={props.className}>
-          {props.children}
-        </div>,
+        props.renderPop ? (
+          props.renderPop({ ...props })
+        ) : (
+          <div
+            ref={props.setPop}
+            style={props.style}
+            className={props.className}>
+            {props.children}
+          </div>
+        ),
         document.body
       )}
   </React.Fragment>
