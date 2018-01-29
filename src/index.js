@@ -11,7 +11,7 @@ const enhance = rc.compose(
   rc.setPropTypes({
     renderRef: PropTypes.any.isRequired,
     renderPop: PropTypes.func,
-    children: PropTypes.any.isRequired,
+    children: PropTypes.any,
     options: PropTypes.object,
     canClickOutside: PropTypes.bool
   }),
