@@ -4,7 +4,7 @@
     "react-dom": "^16.2.0"
   },
   "name": "@d8660091/react-popper",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A React component for displaying popper based on popper.js",
   "main": "dist/index.js",
   "author": "Xu Deng",
