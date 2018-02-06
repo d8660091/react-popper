@@ -13,6 +13,7 @@ const enhance = rc.compose(
     renderPop: PropTypes.func,
     children: PropTypes.any,
     options: PropTypes.object,
+    defaultIsOpened: PropTypes.bool,
     canClickOutside: PropTypes.bool
   }),
   rc.withStateHandlers(
@@ -47,9 +48,9 @@ const enhance = rc.compose(
     }
   ),
   rc.withStateHandlers(
-    {
-      isOpened: false
-    },
+    ({ defaultIsOpened = false }) => ({
+      isOpened: defaultIsOpened
+    }),
     {
       open: (_, props) => () => {
         return {

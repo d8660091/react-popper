@@ -46,17 +46,18 @@ import Popper from '@d8660091/react-popper'
 Props:
 
 ``` typescript
-{
+interface PopperProps {
   renderRef: (RenderProps) => ReactNode,
   options?: Object,
   renderPop?: (RenderProps) => ReactNode,
   children?: ReactNode[],
   canClickOutside?: Boolean, // default: false
   style?: Object,
-  className?: string
+  className?: string,
+  defaultIsOpened?: Boolean, // default: false
 }
 
-interfcae RenderProps {
+interfcae RenderProps extends PopperProps {
   setReference: (el: HTMLElement) => void,
   setPop: (el: HTMLElement) => void,
   isOpened: boolean,
@@ -72,6 +73,7 @@ interfcae RenderProps {
 * canClickOutside: if true, popper will not hide itself when users click outside.
 * style and className: goes to the popper instead of the reference.
 * renderPop: if this function is set, the children, style and className will be ignored and the popper will be rendered using this function.
+* defaultIsOpened: whether open popper when it mounts
 
 [**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
