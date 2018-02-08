@@ -69,7 +69,11 @@ const enhance = rc.compose(
   ),
   rc.withHandlers({
     onClick: props => e => {
-      if (props.reference && !props.canClickOutside) {
+      if (
+        props.reference &&
+        !props.canClickOutside &&
+        !e.canBeIgnoredByReactPopper
+      ) {
         const isInsidePop = props.pop && props.pop.contains(e.target)
         if (!props.reference.contains(e.target) && !isInsidePop) {
           // click outside
