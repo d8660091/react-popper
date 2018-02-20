@@ -1,5 +1,6 @@
 # React Popper
 
+[![CircleCI](https://circleci.com/gh/d8660091/react-popper.svg?style=svg)](https://circleci.com/gh/d8660091/react-popper)
 [![npm version](https://badge.fury.io/js/%40d8660091%2Freact-popper.svg)](https://badge.fury.io/js/%40d8660091%2Freact-popper)
 
 The best React popper based on [popper.js](https://github.com/FezVrasta/popper.js) and [React 16](https://reactjs.org/blog/2017/09/26/react-v16.0.html)
