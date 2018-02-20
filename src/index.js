@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import Popper from 'popper.js'
-import _ from 'lodash'
 
 import * as rc from 'recompose'
 

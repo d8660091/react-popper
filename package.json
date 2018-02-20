@@ -20,7 +20,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4",
     "popper.js": "^1.12.9",
     "prop-types": "^15.6.0",
     "recompose": "^0.26.0"
