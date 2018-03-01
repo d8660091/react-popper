@@ -123,3 +123,13 @@ export default enhance(props => (
       )}
   </React.Fragment>
 ))
+
+export const ClickableArea = props => (
+  <div ref={el => el && el.addEventListener('mousedown', ignoreEvent)}>
+    {props.children}
+  </div>
+)
+
+function ignoreEvent(e) {
+  e.canBeIgnoredByReactPopper = true
+}

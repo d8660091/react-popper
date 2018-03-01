@@ -12,7 +12,7 @@ import {
 } from '@storybook/addon-knobs/react'
 
 /* import Popper from '@d8660091/react-popper'*/
-import Popper from '../src/index'
+import Popper, { ClickableArea } from '../src/index'
 
 const placementOptions = {
   top: 'Top',
@@ -215,6 +215,40 @@ storiesOf('Popper', module)
         )}>
         <div>Popper content</div>
       </Popper>
+    </div>
+  ))
+  .add('Can click specific area', () => (
+    <div>
+      <Popper
+        renderRef={({ setReference, toggle }) => (
+          <span
+            ref={setReference}
+            onClick={toggle}
+            style={{
+              position: 'relative',
+              left: `${number('x-position', 0, {
+                range: true,
+                min: 0,
+                max: 99,
+                step: 1
+              })}vw`,
+              top: `${number('y-position', 0, {
+                range: true,
+                min: 0,
+                max: 99,
+                step: 1
+              })}vh`
+            }}>
+            Minimal Popover
+          </span>
+        )}>
+        <div>Popper content</div>
+      </Popper>
+      <ClickableArea>
+        <div style={{ marginTop: 50, padding: 50, backgroundColor: 'grey' }}>
+          Click this area will not close popper
+        </div>
+      </ClickableArea>
     </div>
   ))
 
