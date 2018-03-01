@@ -76,6 +76,18 @@ interfcae RenderProps extends PopperProps {
 * renderPop: if this function is set, the children, style and className will be ignored and the popper will be rendered using this function.
 * defaultIsOpened: whether open popper when it mounts
 
+## ClickableArea
+You can click ClickableArea without closing popper, which is useful when you have an interactable Popper rendered by another parent Popper.
+
+``` jsx
+import { ClickableArea } from '@d8660091/react-popper'
+
+<ClickableArea>
+  clickable text
+</ClickableArea>
+```
+
+
 [**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
 
