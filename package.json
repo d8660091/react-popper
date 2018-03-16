@@ -4,9 +4,10 @@
     "react-dom": "^16.2.0"
   },
   "name": "@d8660091/react-popper",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A React component for displaying popper based on popper.js",
   "main": "dist/index.js",
+  "module": "dist/index-es6.js",
   "author": "Xu Deng",
   "repository": {
     "type": "git",
@@ -45,8 +46,8 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "clean": "rm -rf build && mkdir build",
-    "build": "npm run clean && babel src -d dist",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run clean && babel src -o dist/index-es6.js && BABEL_ENV=commonjs babel src -o dist/index.js",
     "test": "jest",
     "prepublish": "npm run build"
   }
