@@ -31,6 +31,7 @@ Import in your source file:
 ``` jsx
 import Popper from '@d8660091/react-popper'
 
+// A simple popper
 <Popper
   options={{ 
     placement: 'bottom'
@@ -42,11 +43,55 @@ import Popper from '@d8660091/react-popper'
   )}>
   <div>Popper content</div>
 </Popper>
+
+// A nested popper
+<Popper
+  options={{
+    placement: 'right',
+  }}
+  renderRef={({ setReference, open, close, isOpened }) => (
+    <Popper
+      options={{
+        placement: 'bottom',
+      }}
+      renderRef={({
+        setReference: setInnerReference,
+        toggle: innerToggle,
+        isOpened: isInnerOpened
+      }) => (
+        <button
+          ref={el => {
+            setReference(el)
+            setInnerReference(el)
+          }}
+          onClick={() => {
+            close()
+            innerToggle()
+          }}
+          onMouseEnter={() => {
+            !isInnerOpened && open()
+          }}
+          onMouseLeave={() => {
+            close()
+          }}>
+          A button which triggers two popper, one on hover, one on click
+        </button>
+      )}>
+      <div>
+        On click inner popper.
+      </div>
+    </Popper>
+  )}>
+  <div>
+    On hover outer popper content.
+  </div>
+</Popper>
 ```
 
 Props:
 
 ``` typescript
+// Props of Popper
 interface PopperProps {
   renderRef: (RenderProps) => ReactNode,
   options?: Object,
@@ -58,6 +103,7 @@ interface PopperProps {
   defaultIsOpened?: Boolean, // default: false
 }
 
+// Props of renderRef and renderPop
 interfcae RenderProps extends PopperProps {
   setReference: (el: HTMLElement) => void,
   setPop: (el: HTMLElement) => void,
@@ -88,6 +134,6 @@ import { ClickableArea } from '@d8660091/react-popper'
 ```
 
 
-[**Storybook**](https://d8660091.github.io/react-popper/) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
+[**Storybook**](https://github.com/d8660091/react-popper/blob/master/.storybook/index.js) - More usages, including specifying options, styles and nesting. You can also play with the components by live editing the options and placements.
 
 
