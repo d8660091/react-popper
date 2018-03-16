@@ -12,7 +12,7 @@ import {
 } from '@storybook/addon-knobs/react'
 
 /* import Popper from '@d8660091/react-popper'*/
-import Popper, { ClickableArea } from '../src/index'
+import Popper, { ClickableArea } from '../dist/index-es6'
 
 const placementOptions = {
   top: 'Top',

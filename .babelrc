@@ -3,6 +3,9 @@
   "env": {
     "commonjs": {
       "presets": ["es2015", "stage-0", "react"]
+    },
+    "test": {
+      "presets": ["es2015", "stage-0", "react"]
     }
   }
 }
