@@ -8,7 +8,7 @@ React [popper.js](https://github.com/FezVrasta/popper.js) component based on [Po
 **Features**:
 * Easy to use, check the usage below.
 * React to props change, re-render the popper when options change.
-* Nesting, for example, there can be two popup windows respond to _mouseenter_ and _click_ events of a button separately.
+* Nestable, for example, there can be two popup windows respond to _mouseenter_ and _click_ events of a button separately.
 
 [Try it](https://d8660091.github.io/react-popper/)
 
