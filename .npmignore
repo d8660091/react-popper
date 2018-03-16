@@ -1,4 +1,5 @@
 .storybook
+.circleci
 jsconfig.json
 .prettierrc.yaml
 yarn.lock
