@@ -3,11 +3,18 @@ import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import Popper from 'popper.js'
 
-import * as rc from 'recompose'
+import {
+  compose,
+  lifecycle,
+  setDisplayName,
+  setPropTypes,
+  withHandlers,
+  withStateHandlers
+} from 'recompose'
 
-const enhance = rc.compose(
-  rc.setDisplayName('Popper'),
-  rc.setPropTypes({
+const enhance = compose(
+  setDisplayName('Popper'),
+  setPropTypes({
     renderRef: PropTypes.any.isRequired,
     renderPop: PropTypes.func,
     children: PropTypes.any,
@@ -15,7 +22,7 @@ const enhance = rc.compose(
     defaultIsOpened: PropTypes.bool,
     canClickOutside: PropTypes.bool
   }),
-  rc.withStateHandlers(
+  withStateHandlers(
     {
       reference: null
     },
@@ -29,7 +36,7 @@ const enhance = rc.compose(
       }
     }
   ),
-  rc.withStateHandlers(
+  withStateHandlers(
     {
       pop: null,
       popper: null
@@ -46,7 +53,7 @@ const enhance = rc.compose(
       }
     }
   ),
-  rc.withStateHandlers(
+  withStateHandlers(
     ({ defaultIsOpened = false }) => ({
       isOpened: defaultIsOpened
     }),
@@ -66,7 +73,7 @@ const enhance = rc.compose(
       }
     }
   ),
-  rc.withHandlers({
+  withHandlers({
     onClick: props => e => {
       if (
         props.reference &&
@@ -81,7 +88,7 @@ const enhance = rc.compose(
       }
     }
   }),
-  rc.lifecycle({
+  lifecycle({
     componentDidUpdate() {
       if (this.props.popper) {
         this.props.popper.scheduleUpdate()
