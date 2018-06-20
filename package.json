@@ -4,7 +4,7 @@
     "react-dom": "^16.2.0"
   },
   "name": "@d8660091/react-popper",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "A React component for displaying popper based on popper.js",
   "main": "dist/index.js",
   "module": "dist/index-es6.js",
@@ -21,27 +21,27 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "popper.js": "^1.12.9",
-    "prop-types": "^15.6.0",
-    "recompose": "^0.26.0"
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.6.2",
+    "recompose": "^0.27.1"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.3.11",
-    "@storybook/addon-knobs": "^3.3.11",
-    "@storybook/addon-options": "^3.3.11",
-    "@storybook/addon-storyshots": "^3.3.11",
-    "@storybook/addons": "^3.3.11",
-    "@storybook/react": "^3.3.10",
-    "@storybook/storybook-deployer": "^2.2.0",
+    "@storybook/addon-info": "^3.4.7",
+    "@storybook/addon-knobs": "^3.4.7",
+    "@storybook/addon-options": "^3.4.7",
+    "@storybook/addon-storyshots": "^3.4.7",
+    "@storybook/addons": "^3.4.7",
+    "@storybook/react": "^3.4.7",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "jest": "^22.1.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-test-renderer": "^16.2.0"
+    "jest": "^23.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-test-renderer": "^16.4.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
