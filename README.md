@@ -92,27 +92,29 @@ import Popper from '@d8660091/react-popper'
 Props:
 
 ``` typescript
-// Props of Popper
-interface PopperProps {
-  renderRef: (RenderProps) => ReactNode,
-  options?: Object,
-  renderPop?: (RenderProps) => ReactNode,
-  children?: ReactNode[],
-  canClickOutside?: Boolean, // default: false
-  style?: Object,
-  className?: string,
-  defaultIsOpened?: Boolean, // default: false
+interface RenderProps extends PopperProps {
+  setReference: (el: HTMLElement) => void;
+  setPop: (el: HTMLElement) => void;
+  isOpened: boolean;
+  open: () => void;
+  close: () => void;
+  toggle: () => void;
 }
 
-// Props of renderRef and renderPop
-interfcae RenderProps extends PopperProps {
-  setReference: (el: HTMLElement) => void,
-  setPop: (el: HTMLElement) => void,
-  isOpened: boolean,
-  open: () => void,
-  close: () => void,
-  toggle: () => void,
+type PopperProps = {
+  renderRef: (props: RenderProps) => React.ReactElement<any> ;
+  options?: Object;
+  renderPop?: (props: RenderProps) => React.ReactNode;
+  children?: React.ReactNode;
+  canClickOutside?: Boolean; // default: false
+  style?: Object;
+  className?: string;
+  defaultIsOpened?: Boolean; // default: false
 }
+
+const Popper: React.ComponentClass<PopperProps>;
+
+export default Popper;
 ```
 
 * options: popper.js [options](https://popper.js.org/popper-documentation.html#defaults).
