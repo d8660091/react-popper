@@ -1,4 +1,5 @@
 declare module '@d8660091/react-popper' {
+  import { PopperOptions } from 'popper.js'
   import * as React from 'react';
 
   interface RenderProps extends PopperProps {
@@ -12,7 +13,7 @@ declare module '@d8660091/react-popper' {
 
   type PopperProps = {
     renderRef: (props: RenderProps) => React.ReactElement<any> ;
-    options?: Object;
+    options?: PopperOptions;
     renderPop?: (props: RenderProps) => React.ReactNode;
     children?: React.ReactNode;
     canClickOutside?: Boolean; // default: false
