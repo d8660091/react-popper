@@ -39,6 +39,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "jest": "^23.1.0",
     "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-test-renderer": "^16.4.1"
   },
   "scripts": {
