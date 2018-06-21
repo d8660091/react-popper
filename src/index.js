@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
 import Popper from 'popper.js'
 
 import {
@@ -115,19 +114,13 @@ export default enhance(props => (
   <React.Fragment>
     {props.renderRef({ ...props })}
     {props.isOpened &&
-      ReactDOM.createPortal(
-        props.renderPop ? (
-          props.renderPop({ ...props })
-        ) : (
-          <div
-            ref={props.setPop}
-            style={props.style}
-            className={props.className}>
-            {props.children}
-          </div>
-        ),
-        document.body
-      )}
+      (props.renderPop ? (
+        props.renderPop({ ...props })
+      ) : (
+        <div ref={props.setPop} style={props.style} className={props.className}>
+          {props.children}
+        </div>
+      ))}
   </React.Fragment>
 ))
 

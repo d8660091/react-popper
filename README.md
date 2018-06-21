@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/%40d8660091%2Freact-popper.svg)](https://badge.fury.io/js/%40d8660091%2Freact-popper)
 [![dependencies Status](https://david-dm.org/d8660091/react-popper/status.svg)](https://david-dm.org/d8660091/react-popper)
 
-React [popper.js](https://github.com/FezVrasta/popper.js) component based on [Portals](https://reactjs.org/docs/portals.html)
+React [popper.js](https://github.com/FezVrasta/popper.js) component.
 
 **Features**:
 * Easy to use, check the usage below.
