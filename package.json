@@ -3,7 +3,7 @@
     "react": "^16.2.0"
   },
   "name": "@d8660091/react-popper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React component for displaying popper based on popper.js",
   "main": "dist/index.js",
   "module": "dist/index-es6.js",
