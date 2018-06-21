@@ -94,31 +94,31 @@ Types (index.d.ts):
 ``` typescript
 declare module '@d8660091/react-popper' {
   import { PopperOptions } from 'popper.js'
-  import * as React from 'react';
+  import * as React from 'react'
 
   interface RenderProps extends PopperProps {
-    setReference: (el: HTMLElement) => void;
-    setPop: (el: HTMLElement) => void;
-    isOpened: boolean;
-    open: () => void;
-    close: () => void;
-    toggle: () => void;
+    setReference: React.Ref<HTMLElement>
+    setPop: (el: HTMLElement) => void
+    isOpened: boolean
+    open: () => void
+    close: () => void
+    toggle: () => void
   }
 
   type PopperProps = {
-    renderRef: (props: RenderProps) => React.ReactElement<any> ;
-    options?: PopperOptions;
-    renderPop?: (props: RenderProps) => React.ReactNode;
-    children?: React.ReactNode;
-    canClickOutside?: Boolean; // default: false
-    style?: Object;
-    className?: string;
-    defaultIsOpened?: Boolean; // default: false
+    renderRef: (props: RenderProps) => React.ReactElement<any>
+    options?: PopperOptions
+    renderPop?: (props: RenderProps) => React.ReactNode
+    children?: React.ReactNode
+    canClickOutside?: Boolean // default: false
+    style?: Object
+    className?: string
+    defaultIsOpened?: Boolean // default: false
   }
 
-  const Popper: React.ComponentClass<PopperProps>;
+  const Popper: React.ComponentClass<PopperProps>
 
-  export default Popper;
+  export default Popper
 }
 ```
 
