@@ -4,7 +4,7 @@ declare module '@d8660091/react-popper' {
 
   interface RenderProps extends PopperProps {
     setReference: React.Ref<HTMLElement>
-    setPop: (el: HTMLElement) => void
+    setPop: React.Ref<HTMLElement>
     isOpened: boolean
     open: () => void
     close: () => void
