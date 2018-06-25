@@ -12,8 +12,8 @@ declare module '@d8660091/react-popper' {
   }
 
   type PopperProps = {
-    renderRef: (props: RenderProps) => React.ReactElement<any>
-    renderPop?: (props: RenderProps) => React.ReactElement<any>
+    renderRef: (props: RenderProps) => React.ReactNode
+    renderPop?: (props: RenderProps) => React.ReactNode
     options?: PopperOptions
     children?: React.ReactNode
     canClickOutside?: Boolean // default: false

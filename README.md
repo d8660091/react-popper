@@ -98,7 +98,7 @@ declare module '@d8660091/react-popper' {
 
   interface RenderProps extends PopperProps {
     setReference: React.Ref<HTMLElement>
-    setPop: (el: HTMLElement) => void
+    setPop: React.Ref<HTMLElement>
     isOpened: boolean
     open: () => void
     close: () => void
@@ -106,9 +106,9 @@ declare module '@d8660091/react-popper' {
   }
 
   type PopperProps = {
-    renderRef: (props: RenderProps) => React.ReactElement<any>
-    options?: PopperOptions
+    renderRef: (props: RenderProps) => React.ReactNode
     renderPop?: (props: RenderProps) => React.ReactNode
+    options?: PopperOptions
     children?: React.ReactNode
     canClickOutside?: Boolean // default: false
     style?: Object
